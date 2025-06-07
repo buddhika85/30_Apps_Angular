@@ -3,20 +3,35 @@
 >
   <h1 class="text-xl font-bold text-center mb-4">Profile Card</h1>
 
-  <div class="grid grid-cols-2 gap-x-1 gap-y-1 text-black">
+  <div class="grid grid-cols-2 gap-x-1 gap-y-1">
     <label class="font-semibold">Name:</label>
-    <label>Name Input</label>
+    <label class="font-thin text-blue-500">{{ user.name }}</label>
 
     <label class="font-semibold">Age:</label>
-    <label>Age Input</label>
+    <label class="font-thin text-blue-500">{{ user.age }}</label>
 
     <label class="font-semibold">Description:</label>
-    <label>Description Input</label>
+    <label class="font-thin text-blue-500">{{ user.description }}</label>
   </div>
 
   <div class="grid grid-cols-1 mt-5 gap-x-1 gap-y-1">
-    <input type="text" placeholder="name" class="text-center" />
-    <input type="text" placeholder="age" class="text-center" />
-    <input type="text" placeholder="description" class="text-center" />
+    <input
+      type="text"
+      placeholder="name"
+      class="text-center"
+      [(ngModel)]="user.name"
+    />
+    <input
+      type="text"
+      placeholder="age"
+      class="text-center"
+      [(ngModel)]="user.age"
+    />
+    <input
+      type="text"
+      placeholder="description"
+      class="text-center"
+      [(ngModel)]="user.description"
+    />
   </div>
 </div>
