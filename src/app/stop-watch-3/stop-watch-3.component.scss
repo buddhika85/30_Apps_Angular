@@ -1,0 +1,17 @@
+.startBtn {
+  @apply bg-green-400;
+  @apply hover:bg-green-500;
+  @apply rounded;
+  @apply text-white;
+  @apply w-20 mx-auto;
+  @apply border border-gray-500;
+}
+
+.stopBtn {
+  @apply bg-gray-400;
+  @apply hover:bg-gray-500;
+  @apply rounded;
+  @apply text-white;
+  @apply w-20 mx-auto;
+  @apply border border-gray-500;
+}
