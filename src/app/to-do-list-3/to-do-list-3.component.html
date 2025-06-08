@@ -1,0 +1,31 @@
+<div
+  class="flex justify-center bg-gray-200 w-3/6 m-10 mx-auto mt-5 p-1 rounded"
+>
+  <div class="grid grid-col1">
+    <h3 class="text-center font-bold text-lg text-blue-950">To-Do List</h3>
+    <input
+      placeholder="Enter a new task"
+      class="text-center border border-gray-950 rounded p-2"
+      [(ngModel)]="toDoStr"
+    />
+    <button
+      class="bg-blue-700 w-20 p-1 my-3 mx-auto rounded text-white hover:bg-blue-900"
+      (click)="addToDo()"
+    >
+      Add Task
+    </button>
+
+    <div
+      class="grid grid-cols-2 p-1"
+      *ngFor="let item of toDoList.toDos; let i = index"
+    >
+      <div>{{ item.toString() }}</div>
+      <button
+        class="bg-orange-500 rounded text-white hover:bg-red-700"
+        (click)="toDoList.removeToDo(item.id)"
+      >
+        Remove
+      </button>
+    </div>
+  </div>
+</div>
