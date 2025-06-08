@@ -1,0 +1,14 @@
+.POSITIVE {
+  @apply text-blue-400;
+  @apply bg-slate-200;
+}
+
+.NEGATIVE {
+  @apply text-red-400;
+  @apply bg-slate-200;
+}
+
+.NEUTRAL {
+  @apply text-green-400;
+  @apply bg-slate-200;
+}

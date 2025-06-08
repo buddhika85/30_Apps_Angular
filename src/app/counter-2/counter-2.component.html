@@ -1,6 +1,6 @@
 <div class="flex flex-col">
   <h3 class="font-semibold text-lg text-center">
-    Counter: {{ counter.count }}
+    Counter: {{ counter.count() }}
   </h3>
   <div class="text-center">
     <button
@@ -18,7 +18,7 @@
     </button>
   </div>
 
-  <div class="text-center">
-    <p class="text-green-600">Counte is {{ counter.counterStatus }}</p>
-  </div>
+  <p class="text-center" [ngClass]="counter.counterStatus()">
+    {{ counter.counterStatus() }}
+  </p>
 </div>
