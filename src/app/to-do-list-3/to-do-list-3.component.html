@@ -16,19 +16,6 @@
       Add Task
     </button>
 
-    <!-- <div
-      class="grid grid-cols-2 p-1"
-      *ngFor="let item of toDoList.toDos; let i = index"
-    >
-      <div>{{ item.toString() }}</div>
-      <button
-        class="bg-orange-500 rounded text-white hover:bg-red-700"
-        (click)="toDoList.removeToDo(item.id)"
-      >
-        Remove
-      </button>
-    </div> -->
-
     @if(toDoList.toDos.length === 0) {
     <p class="text-gray-400">No To-Dos to show. Please add one.</p>
     } @else {

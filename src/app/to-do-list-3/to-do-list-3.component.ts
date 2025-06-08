@@ -14,6 +14,10 @@ export class ToDoList3Component {
   toDoStr: string = '';
 
   addToDo() {
+    if (!this.toDoStr.trim()) {
+      this.toDoStr = '';
+      return;
+    }
     this.toDoList.addToDo(this.toDoStr);
     this.toDoStr = '';
   }
