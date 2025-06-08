@@ -1,4 +1,4 @@
-import { Component, inject, Injectable } from '@angular/core';
+import { Component, inject, Injectable, signal } from '@angular/core';
 
 @Component({
   selector: 'app-counter-2',
@@ -14,12 +14,20 @@ export class Counter2Component {
 @Injectable({ providedIn: 'root' })
 export class Counter {
   count: number = 0;
+  counterStatus: string = 'NEUTRAL';
 
   increase() {
     ++this.count;
+    this.updateStatus();
   }
 
   decrease() {
     --this.count;
+    this.updateStatus();
+  }
+
+  updateStatus() {
+    if (this.count > 0) this.counterStatus = 'POSTIVE';
+    else this.counterStatus = 'NEGATIVE';
   }
 }
