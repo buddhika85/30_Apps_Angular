@@ -15,6 +15,7 @@ export class ToDoList3Component {
 
   addToDo() {
     this.toDoList.addToDo(this.toDoStr);
+    this.toDoStr = '';
   }
 }
 
