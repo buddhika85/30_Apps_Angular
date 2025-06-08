@@ -1,0 +1,20 @@
+<div class="flex flex-col">
+  <h3 class="font-semibold text-lg text-center">
+    Counter: {{ counter.count }}
+  </h3>
+  <div class="text-center">
+    <button
+      class="bg-blue-600 text-white w-20 h-10 rounded text-center"
+      (click)="counter.increase()"
+    >
+      Increase
+    </button>
+
+    <button
+      class="bg-red-600 text-white w-20 h-10 rounded text-center ml-1"
+      (click)="counter.decrease()"
+    >
+      Decrease
+    </button>
+  </div>
+</div>
