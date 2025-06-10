@@ -3,11 +3,11 @@
     <h3 class="font-semibold text-lg p-1">Guess the Number Game</h3>
 
     <!-- won -->
-    @if (getIsWonOrLost()) {
+    @if (isGameOver()) {
     <button
       class="w-24 rounded text-white bg-orange-600 hover:bg-orange-800 text-xs p-1 mx-auto disabled:bg-slate-500"
       (click)="resetGame()"
-      [disabled]="!getIsWonOrLost()"
+      [disabled]="!isGameOver()"
     >
       Play Again
     </button>
@@ -36,11 +36,3 @@
     <label class="text-xs p-1 text-blue-400">{{ getResult() }}</label>
   </div>
 </div>
-
-<!-- 
-
-@if(!getIsWon() && getAttemptsLeft() > 0) {
-
-} @else if (!getIsWon() && getAttemptsLeft() > 0) {
-
-} -->

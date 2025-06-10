@@ -11,11 +11,11 @@ import { FormsModule } from '@angular/forms';
 })
 export class GuessNumber4Component implements OnInit {
   guessNumber: number | null = null;
-  private maxGuessCount: number = 3;
+  static MAX_GUESS_COUNT: number = 10;
   private randomNumber!: number; //  definite assignment assertion operator, will be assigned before we use it
   private guessCount!: number;
   private result!: string;
-  private isWonOrLost!: boolean;
+  private gameOver!: boolean;
 
   ngOnInit(): void {
     this.resetGame();
@@ -23,11 +23,10 @@ export class GuessNumber4Component implements OnInit {
 
   resetGame(): void {
     this.guessNumber = null;
-    this.randomNumber = 1;
-    Math.floor(Math.random() * 100) + 1;
+    this.randomNumber = Math.floor(Math.random() * 100) + 1;
     this.guessCount = 0;
     this.result = '';
-    this.isWonOrLost = false;
+    this.gameOver = false;
   }
 
   play(): void {
@@ -39,11 +38,11 @@ export class GuessNumber4Component implements OnInit {
 
   private setGameResult(): void {
     if (
-      this.guessCount === this.maxGuessCount &&
+      this.guessCount === GuessNumber4Component.MAX_GUESS_COUNT &&
       this.randomNumber != this.guessNumber
     ) {
-      this.result = `Ohh no, the random number is ${this.randomNumber}`;
-      this.isWonOrLost = true;
+      this.result = `Game Over. Better luck next time. The Random number is ${this.randomNumber}`;
+      this.gameOver = true;
     } else if (
       this.guessNumber !== null &&
       this.randomNumber > this.guessNumber
@@ -57,23 +56,25 @@ export class GuessNumber4Component implements OnInit {
     } else {
       this.result = 'Wow good job, you guessed correct';
       this.guessNumber = null;
-      this.isWonOrLost = true;
+      this.gameOver = true;
     }
   }
 
   getAttemptsLeft(): number {
-    return this.maxGuessCount - this.guessCount;
+    return GuessNumber4Component.MAX_GUESS_COUNT - this.guessCount;
   }
 
   playMore(): boolean {
-    return this.maxGuessCount > this.guessCount && !this.isWonOrLost;
+    return (
+      GuessNumber4Component.MAX_GUESS_COUNT > this.guessCount && !this.gameOver
+    );
   }
 
   getResult(): string {
     return this.result;
   }
 
-  getIsWonOrLost(): boolean {
-    return this.isWonOrLost;
+  isGameOver(): boolean {
+    return this.gameOver;
   }
 }
