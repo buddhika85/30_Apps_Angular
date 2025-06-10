@@ -8,5 +8,5 @@ Angular version = 18.2.14.
 ![3](https://github.com/buddhika85/30_Apps_Angular/blob/main/app_pics/3.png)
 ### 4 Stop Watch
 ![4](https://github.com/buddhika85/30_Apps_Angular/blob/main/app_pics/4.png)
-### 4 Stop Watch
+### 5 Guess number game
 ![5](https://github.com/buddhika85/30_Apps_Angular/blob/main/app_pics/5.png)
