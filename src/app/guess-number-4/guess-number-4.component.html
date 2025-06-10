@@ -1,0 +1,46 @@
+<div class="flex flex-col">
+  <div class="grid grid-col-1 mx-auto p-5 mt-10 bg-slate-100 text-center">
+    <h3 class="font-semibold text-lg p-1">Guess the Number Game</h3>
+
+    <!-- won -->
+    @if (getIsWonOrLost()) {
+    <button
+      class="w-24 rounded text-white bg-orange-600 hover:bg-orange-800 text-xs p-1 mx-auto disabled:bg-slate-500"
+      (click)="resetGame()"
+      [disabled]="!getIsWonOrLost()"
+    >
+      Play Again
+    </button>
+    } @else { @if(getAttemptsLeft() > 0) {
+    <!-- not won, still more attempts left -->
+    <label class="text-xs p-1">Guess the number between 1 and 100!</label>
+    <label class="text-xs p-1 mt-2">Your Guess:</label>
+    <input
+      class="m-3 rounded border border-gray-400 p-1 text-center"
+      type="number"
+      [(ngModel)]="guessNumber"
+    />
+    <button
+      class="w-24 rounded text-white bg-green-600 hover:bg-green-800 text-xs p-1 mx-auto disabled:bg-slate-500"
+      (click)="play()"
+      [disabled]="!playMore()"
+    >
+      Submit Geuss
+    </button>
+    <label class="text-xs p-1 mt-5"
+      >Attempts Left {{ getAttemptsLeft() }}</label
+    >
+
+    } }
+
+    <label class="text-xs p-1 text-blue-400">{{ getResult() }}</label>
+  </div>
+</div>
+
+<!-- 
+
+@if(!getIsWon() && getAttemptsLeft() > 0) {
+
+} @else if (!getIsWon() && getAttemptsLeft() > 0) {
+
+} -->
