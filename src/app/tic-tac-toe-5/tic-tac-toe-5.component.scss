@@ -1,0 +1,11 @@
+.Cell {
+  @apply bg-slate-300;
+  @apply mx-auto;
+  @apply mb-2;
+  @apply grid;
+  @apply place-items-center;
+  @apply p-2;
+  @apply w-24;
+  @apply h-24;
+  @apply hover:bg-slate-400 cursor-pointer;
+}
