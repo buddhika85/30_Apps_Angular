@@ -10,3 +10,5 @@ Angular version = 18.2.14.
 ![4](https://github.com/buddhika85/30_Apps_Angular/blob/main/app_pics/4.png)
 ### 5 Guess number game
 ![5](https://github.com/buddhika85/30_Apps_Angular/blob/main/app_pics/5.png)
+### 6 Tic Tac Toe
+![6](https://github.com/buddhika85/30_Apps_Angular/blob/main/app_pics/6.png)
