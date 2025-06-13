@@ -12,3 +12,5 @@ Angular version = 18.2.14.
 ![5](https://github.com/buddhika85/30_Apps_Angular/blob/main/app_pics/5.png)
 ### 6 Tic Tac Toe
 ![6](https://github.com/buddhika85/30_Apps_Angular/blob/main/app_pics/6.png)
+### 7 Dynamic List Filter
+![7](https://github.com/buddhika85/30_Apps_Angular/blob/main/app_pics/7.png)
