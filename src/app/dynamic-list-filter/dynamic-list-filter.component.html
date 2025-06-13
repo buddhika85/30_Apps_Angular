@@ -1,0 +1,19 @@
+<div class="flex flex-col mx-auto w-1/3 bg-slate-50 p-1 m-1">
+  <h3 class="text-lg font-bold text-center">Dynamic List Filter</h3>
+  <input
+    type="text"
+    placeholder="Search tutorials..."
+    class="ml-5 mr-5 mt-2 mb-2 p-1 border border-slate-400 rounded"
+    [(ngModel)]="typedString"
+    (ngModelChange)="onChange()"
+  />
+
+  @for (item of tutorialsDisplayList; track $index) {
+  <div
+    class="ml-5 mr-5 mt-1 mb-1 p-1 border border-slate-400 rounded text-slate-500 hover:bg-orange-50 cursor-pointer"
+    (click)="selectItem(item)"
+  >
+    {{ item }}
+  </div>
+  }
+</div>

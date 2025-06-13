@@ -6,19 +6,12 @@ import { ToDoList3Component } from './to-do-list-3/to-do-list-3.component';
 import { StopWatch3Component } from './stop-watch-3/stop-watch-3.component';
 import { GuessNumber4Component } from './guess-number-4/guess-number-4.component';
 import { TicTacToe5Component } from './tic-tac-toe-5/tic-tac-toe-5.component';
+import { DynamicListFilterComponent } from './dynamic-list-filter/dynamic-list-filter.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [
-    // RouterOutlet,
-    // PhotoCard1Component,
-    // Counter2Component,
-    // ToDoList3Component,
-    // StopWatch3Component,
-    // GuessNumber4Component,
-    TicTacToe5Component,
-  ],
+  imports: [DynamicListFilterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
