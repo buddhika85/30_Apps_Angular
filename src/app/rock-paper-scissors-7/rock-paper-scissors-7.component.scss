@@ -19,3 +19,29 @@
   @apply my-auto;
   @apply rounded;
 }
+
+.img-cell-human {
+  @apply w-40;
+  @apply h-40;
+  @apply p-1;
+  @apply text-center;
+  @apply border;
+  @apply border-orange-300;
+  @apply rounded;
+  //@apply bg-orange-100;
+  @apply mr-3;
+  @apply mb-3;
+}
+
+.img-cell-computer {
+  @apply w-40;
+  @apply h-40;
+  @apply p-1;
+  @apply text-center;
+  @apply border;
+  @apply border-green-300;
+  @apply rounded;
+  //@apply bg-green-100;
+  @apply mr-3;
+  @apply mb-3;
+}

@@ -14,8 +14,10 @@
 
   @if (humanSelectedCell) {
   <div class="grid grid-cols-2 mt-5 mx-auto">
-    <div class="text-right font-semibold text-blue-500 mr-3">You selected</div>
-    <div class="img-cell">
+    <div class="text-right font-semibold text-orange-500 mr-3">
+      You selected
+    </div>
+    <div class="img-cell-human">
       <img
         [src]="humanSelectedCell.imagePath"
         [alt]="humanSelectedCell.text"
@@ -29,7 +31,7 @@
     <div class="text-right font-semibold text-green-500 mr-3">
       Computer selected
     </div>
-    <div class="img-cell">
+    <div class="img-cell-computer">
       <img
         [src]="computerSelectedCell.imagePath"
         [alt]="computerSelectedCell.text"
