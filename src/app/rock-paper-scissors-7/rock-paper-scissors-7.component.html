@@ -1,0 +1,44 @@
+<div class="flex flex-col w-1/3 mx-auto p-2">
+  <h3 class="grid grid-col-3 text-center text-xl font-bold">
+    Rock - Paper - Scissors
+  </h3>
+
+  <div class="grid grid-cols-3 mt-5 mx-auto">
+    @for (imageCell of imageCells; track $index) {
+    <div class="img-cell" (click)="play(imageCell)">
+      <img [src]="imageCell.imagePath" [alt]="imageCell.text" class="pic" />
+      <div>{{ imageCell.text }}</div>
+    </div>
+    }
+  </div>
+
+  @if (humanSelectedCell) {
+  <div class="grid grid-cols-2 mt-5 mx-auto">
+    <div class="text-right font-semibold text-blue-500 mr-3">You selected</div>
+    <div class="img-cell">
+      <img
+        [src]="humanSelectedCell.imagePath"
+        [alt]="humanSelectedCell.text"
+        class="pic"
+      />
+      <div>{{ humanSelectedCell.text }}</div>
+    </div>
+  </div>
+  } @if (computerSelectedCell) {
+  <div class="grid grid-cols-2 mt-5 mx-auto">
+    <div class="text-right font-semibold text-green-500 mr-3">
+      Computer selected
+    </div>
+    <div class="img-cell">
+      <img
+        [src]="computerSelectedCell.imagePath"
+        [alt]="computerSelectedCell.text"
+        class="pic"
+      />
+      <div>{{ computerSelectedCell.text }}</div>
+    </div>
+  </div>
+  }
+
+  <div class="mx-auto text-left text-red-600 font-bold">{{ result }}</div>
+</div>

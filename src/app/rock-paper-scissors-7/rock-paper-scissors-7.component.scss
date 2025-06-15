@@ -1,0 +1,21 @@
+.img-cell {
+  @apply w-40;
+  @apply h-40;
+  @apply p-1;
+  @apply text-center;
+  @apply border;
+  @apply border-slate-300;
+  @apply rounded;
+  @apply cursor-pointer;
+  @apply bg-blue-100;
+  @apply hover:bg-blue-200;
+  @apply mr-3;
+  @apply mb-3;
+}
+
+.pic {
+  @apply w-32 h-32;
+  @apply mx-auto;
+  @apply my-auto;
+  @apply rounded;
+}
