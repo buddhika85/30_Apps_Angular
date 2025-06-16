@@ -9,11 +9,12 @@ import { TicTacToe5Component } from './tic-tac-toe-5/tic-tac-toe-5.component';
 import { DynamicListFilterComponent } from './dynamic-list-filter/dynamic-list-filter.component';
 import { RockPaperScissors7Component } from './rock-paper-scissors-7/rock-paper-scissors-7.component';
 import { AccordionAnimation8Component } from './accordion-animation-8/accordion-animation-8.component';
+import { RandomJokeGen10Component } from './random-joke-gen-10/random-joke-gen-10.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [AccordionAnimation8Component],
+  imports: [RandomJokeGen10Component],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })

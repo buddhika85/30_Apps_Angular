@@ -1,0 +1,30 @@
+<div class="flex flex-col w-1/2 bg-slate-50 mx-auto p-5 min-h-1/2">
+  <h3 class="text-3xl font-semibold text-center mx-auto p-2 mb-5">
+    Random Joke Generator
+  </h3>
+
+  <button
+    class="mx-auto bg-blue-500 hover:bg-blue-600 text-white p-2 border rounded disabled:bg-slate-200"
+    (click)="getRandomJoke()"
+    [disabled]="getJokeBtnDisabled"
+  >
+    Get Random Joke
+  </button>
+
+  @if(randomJoke) {
+
+  <div class="pt-2">
+    <span class="pl-2 pr-2 text-blue-400 font-semibold">Setup:</span
+    ><span>{{ randomJoke.setup }}</span>
+  </div>
+  <div class="pt-2">
+    <span class="pl-2 pr-2 text-blue-400 font-semibold">Punchline:</span
+    ><span>{{ randomJoke.punchline }}</span>
+  </div>
+
+  } @if(showError) {
+  <div class="pl-2 pr-2 text-red-600 font-semibold">{{ errorMessage }}</div>
+  } @if(showLoading) {
+  <div class="mx-auto font-semibold text-slate-300">{{ loadingText }}</div>
+  }
+</div>
