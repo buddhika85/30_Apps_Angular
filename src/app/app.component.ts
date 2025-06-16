@@ -8,14 +8,15 @@ import { GuessNumber4Component } from './guess-number-4/guess-number-4.component
 import { TicTacToe5Component } from './tic-tac-toe-5/tic-tac-toe-5.component';
 import { DynamicListFilterComponent } from './dynamic-list-filter/dynamic-list-filter.component';
 import { RockPaperScissors7Component } from './rock-paper-scissors-7/rock-paper-scissors-7.component';
+import { AccordionAnimation8Component } from './accordion-animation-8/accordion-animation-8.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RockPaperScissors7Component],
+  imports: [AccordionAnimation8Component],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  title = '30_Apps_Angular';
+  title = '30 Apps Angular';
 }
