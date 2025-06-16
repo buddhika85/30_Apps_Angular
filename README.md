@@ -14,3 +14,6 @@ Angular version = 18.2.14.
 ![6](https://github.com/buddhika85/30_Apps_Angular/blob/main/app_pics/6.png)
 ### 7 Dynamic List Filter
 ![7](https://github.com/buddhika85/30_Apps_Angular/blob/main/app_pics/7.png)
+### 8 Rock Paper Scissors
+![8](https://github.com/buddhika85/30_Apps_Angular/blob/main/app_pics/8.png)
+
