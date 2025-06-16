@@ -16,4 +16,5 @@ Angular version = 18.2.14.
 ![7](https://github.com/buddhika85/30_Apps_Angular/blob/main/app_pics/7.png)
 ### 8 Rock Paper Scissors
 ![8](https://github.com/buddhika85/30_Apps_Angular/blob/main/app_pics/8.png)
-
+### 8 Accordion animation
+![8](https://github.com/buddhika85/30_Apps_Angular/blob/main/app_pics/9.png)
