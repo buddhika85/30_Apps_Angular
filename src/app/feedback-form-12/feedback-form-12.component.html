@@ -1,0 +1,85 @@
+<div class="form-div">
+  <h3 class="text-blue-500 text-center text-lg font-semibold mb-5">
+    Feedback form
+  </h3>
+
+  <form #myForm="ngForm" (ngSubmit)="onSubmit()">
+    <div class="form-row">
+      <label>Name </label>
+      <input
+        type="text"
+        class="text-box"
+        name="name"
+        [(ngModel)]="feedback.name"
+        required
+        minlength="5"
+        #nameTxtBx="ngModel"
+      />
+      <div class="error-section">
+        @if((nameTxtBx.touched || nameTxtBx.dirty) && nameTxtBx.invalid){
+        @if(nameTxtBx.errors?.['required']) {
+        <span>Name Required</span>
+        } @else if (nameTxtBx.errors?.['minlength']) {
+        <span>Input min length is 5</span>
+        } }
+      </div>
+    </div>
+
+    <div class="form-row">
+      <label>Email </label>
+      <input
+        type="text"
+        class="text-box"
+        name="email"
+        [(ngModel)]="feedback.email"
+        #emailTextBx="ngModel"
+        required
+        email
+      />
+      <div class="error-section">
+        @if((emailTextBx.touched || emailTextBx.dirty) && emailTextBx.invalid) {
+        @if(emailTextBx.errors?.['required']) {
+        <span>Email required</span>
+        } @else if (emailTextBx.errors?.['email']) {
+        <span>Must be a valid email address</span>
+        } }
+      </div>
+    </div>
+
+    <div class="form-row">
+      <label>Feedback </label>
+      <textarea
+        type="text"
+        class="text-box"
+        name="feedback"
+        [(ngModel)]="feedback.description"
+        #descTxtArea="ngModel"
+        required
+        minlength="6"
+      ></textarea>
+      <div class="error-section">
+        @if((descTxtArea.touched || descTxtArea.dirty) && descTxtArea.invalid) {
+        @if(descTxtArea.errors?.['required']) {
+        <span>Description required</span>
+        } @else if (descTxtArea.errors?.['minlength']) {
+        <span>Min length of 6 is a must</span>
+        } }
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div></div>
+      <div>
+        <button class="submit-btn" [disabled]="myForm.invalid">Submit</button>
+        <button class="reset-btn" type="reset">Reset</button>
+      </div>
+      <div></div>
+    </div>
+  </form>
+</div>
+
+<div class="result-div">
+  <p>name: {{ feedback.name }}</p>
+  <p>email: {{ feedback.email }}</p>
+  <p>feedback: {{ feedback.description }}</p>
+</div>

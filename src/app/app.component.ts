@@ -10,11 +10,12 @@ import { DynamicListFilterComponent } from './dynamic-list-filter/dynamic-list-f
 import { RockPaperScissors7Component } from './rock-paper-scissors-7/rock-paper-scissors-7.component';
 import { AccordionAnimation8Component } from './accordion-animation-8/accordion-animation-8.component';
 import { RandomJokeGen10Component } from './random-joke-gen-10/random-joke-gen-10.component';
+import { FeedbackForm12Component } from './feedback-form-12/feedback-form-12.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RandomJokeGen10Component],
+  imports: [FeedbackForm12Component],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
