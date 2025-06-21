@@ -4,18 +4,75 @@
   <h3 class="text-center font-semibold mb-5">Contact Form</h3>
 
   <div class="grid grid-cols-1">
-    <label>Name:</label>
-    <input type="text" class="text-box" />
+    <form #myForm="ngForm" (submit)="onSubmit()">
+      <label>Name:</label>
+      <input
+        type="text"
+        class="text-box"
+        name="contact"
+        [(ngModel)]="contactInfo.name"
+        required
+        minlength="2"
+        #nameTxtBx="ngModel"
+      />
+      <div class="error-div">
+        @if((nameTxtBx.dirty || nameTxtBx.touched) && nameTxtBx.invalid) {
+        @if(nameTxtBx.errors?.['required']) {
+        <span>Name required</span>
+        } @else if (nameTxtBx.errors?.['minlength']) {
+        <span>Min length 2</span>
+        } }
+      </div>
 
-    <label>Email:</label>
-    <input type="email" class="text-box" />
+      <label>Email:</label>
+      <input
+        type="email"
+        class="text-box"
+        name="email"
+        [(ngModel)]="contactInfo.email"
+        required
+        email
+        minlength="4"
+        #emailTxtBx="ngModel"
+      />
+      <div class="error-div">
+        @if ((emailTxtBx.touched || emailTxtBx.dirty) && emailTxtBx.invalid) {
+        @if(emailTxtBx.errors?.['required']) {
+        <span>Email required</span>
+        } @else if (emailTxtBx.errors?.['minlength']) {
+        <span>Min length 4</span>
+        } @else if (emailTxtBx.errors?.['email']) {
+        <span>Invalid Email</span>
+        } }
+      </div>
 
-    <label>Subject:</label>
-    <input type="text" class="text-box" />
+      <label>Subject:</label>
+      <input
+        type="text"
+        class="text-box"
+        name="subject"
+        [(ngModel)]="contactInfo.subject"
+        required
+        minlength="2"
+        #subjectTxtBx="ngModel"
+      />
+      <div class="error-div">
+        @if ((subjectTxtBx.touched || subjectTxtBx.dirty) &&
+        subjectTxtBx.invalid) { }
+      </div>
 
-    <label>Message:</label>
-    <textarea type="email" class="text-box"></textarea>
+      <label>Message:</label>
+      <textarea
+        type="email"
+        class="text-box"
+        name="message"
+        [(ngModel)]="contactInfo.message"
+        required
+        minlength="5"
+      ></textarea>
+      <div class="error-div"></div>
 
-    <button class="submit-btn">Submit</button>
+      <button type="submit" class="submit-btn">Submit</button>
+    </form>
   </div>
 </div>

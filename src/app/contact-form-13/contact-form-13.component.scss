@@ -2,6 +2,10 @@
   @apply border border-slate-200 rounded w-full p-1 mb-2;
 }
 
+.error-div {
+  @apply text-sm text-red-500 font-semibold pb-1;
+}
+
 .submit-btn {
   @apply w-full border rounded-none bg-blue-500 hover:bg-blue-600 disabled:bg-slate-400 text-white p-1 mt-4;
 }
