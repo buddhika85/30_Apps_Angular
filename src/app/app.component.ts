@@ -12,11 +12,12 @@ import { AccordionAnimation8Component } from './accordion-animation-8/accordion-
 import { RandomJokeGen10Component } from './random-joke-gen-10/random-joke-gen-10.component';
 import { FeedbackForm12Component } from './feedback-form-12/feedback-form-12.component';
 import { ContactForm13Component } from './contact-form-13/contact-form-13.component';
+import { ContactReactiveForm14Component } from './contact-reactive-form-14/contact-reactive-form-14.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [FeedbackForm12Component, ContactForm13Component],
+  imports: [ContactReactiveForm14Component],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })

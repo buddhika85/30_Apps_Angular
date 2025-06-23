@@ -1,0 +1,76 @@
+<div
+  class="flex flex-col w-1/4 bg-slate-50-50 mx-auto m-3 p-5 border rounded border-slate-200 shadow"
+>
+  <h3 class="mx-auto font-bold mb-5">Contact form - Reactive</h3>
+
+  <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+    <div class="grid grid-cols-1">
+      <label>Name</label>
+      <input
+        class="input-form"
+        type="text"
+        formControlName="name"
+        [class.error]="name?.touched && name?.invalid"
+      />
+      <div class="error-msg">
+        @if((name?.touched || name?.dirty) && name?.invalid) {
+        @if(name?.errors?.['required']) {
+        <span>Name is required</span>
+        } @else if (name?.errors?.['minlength']) {
+        <span>Min length is 2</span>
+        } }
+      </div>
+
+      <label>Email</label>
+      <input
+        class="input-form"
+        type="email"
+        formControlName="email"
+        [class.error]="email?.touched && email?.invalid"
+      />
+      <div class="error-msg">
+        @if ((email?.dirty || email?.touched) && email?.invalid) { @if
+        (email?.errors?.['required']) {
+        <span>Email Required</span>
+        } @else if (email?.errors?.['email']) {
+        <span>Invalid Email</span>
+        } }
+      </div>
+
+      <label>Subject</label>
+      <input
+        class="input-form"
+        type="text"
+        formControlName="subject"
+        [class.error]="subject?.touched && subject?.invalid"
+      />
+      <div class="error-msg">
+        @if ((subject?.dirty || subject?.touched) && subject?.invalid) { @if
+        (subject?.errors?.['required']) {
+        <span>Subject required</span>
+        } @else if (subject?.errors?.['minlength']) {
+        <span>min length of 2 needed</span>
+        } }
+      </div>
+
+      <label>Message</label>
+      <textarea
+        class="input-form"
+        formControlName="message"
+        [class.error]="message?.touched && message?.invalid"
+      ></textarea>
+      <div class="error-msg">
+        @if ((message?.touched || message?.dirty) && message?.invalid) { @if
+        (message?.errors?.['required']) {
+        <span>Message is Required</span>
+        } @else if (message?.errors?.['minlength']) {
+        <span>min length of 5 expected</span>
+        } }
+      </div>
+
+      <button type="submit" class="submit-btn" [disabled]="contactForm.invalid">
+        Submit
+      </button>
+    </div>
+  </form>
+</div>

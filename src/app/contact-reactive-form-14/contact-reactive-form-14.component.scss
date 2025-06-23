@@ -1,0 +1,15 @@
+.error {
+  @apply border rounded border-red-500;
+}
+
+.error-msg {
+  @apply text-red-600 text-sm mb-2;
+}
+
+.input-form {
+  @apply border rounded border-slate-200 p-2;
+}
+
+.submit-btn {
+  @apply bg-green-500 p-3 mb-5 mt-5 hover:bg-green-600 text-white cursor-pointer font-semibold disabled:bg-slate-400 disabled:cursor-none;
+}
