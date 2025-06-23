@@ -74,3 +74,16 @@
     </div>
   </form>
 </div>
+
+<div class="bg-purple-100 mx-auto mt-5 w-1/4 shadow p-5 grid grid-cols-1">
+  @if(contactForm.invalid) {
+
+  <div class="error-msg">Form Incomplete. Check validation errors.</div>
+  } @else {
+  <h3 class="mx-auto text-center font-serif font-semibold mb-5">Form Inputs</h3>
+  <label>{{ this.contactForm.get("name")?.value }}</label>
+  <label>{{ this.contactForm.get("email")?.value }}</label>
+  <label>{{ this.contactForm.get("subject")?.value }}</label>
+  <label>{{ this.contactForm.get("message")?.value }}</label>
+  }
+</div>
