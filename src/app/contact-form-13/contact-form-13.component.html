@@ -84,7 +84,23 @@
         } }
       </div>
 
-      <button type="submit" class="submit-btn">Submit</button>
+      <button type="submit" class="submit-btn" [disabled]="myForm.invalid">
+        Submit
+      </button>
     </form>
+  </div>
+
+  <div class="bg-yellow-50 mt-5 grid grid-cols-2">
+    <div>Name:</div>
+    <div class="text-blue-500 mb-2 text-left">{{ contactInfo.name }}</div>
+
+    <div>Email:</div>
+    <div>{{ contactInfo.email }}</div>
+
+    <div>Subject:</div>
+    <div>{{ contactInfo.subject }}</div>
+
+    <div>Message:</div>
+    <div>{{ contactInfo.message }}</div>
   </div>
 </div>
