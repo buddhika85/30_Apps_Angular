@@ -57,20 +57,32 @@
         #subjectTxtBx="ngModel"
       />
       <div class="error-div">
-        @if ((subjectTxtBx.touched || subjectTxtBx.dirty) &&
-        subjectTxtBx.invalid) { }
+        @if ((subjectTxtBx.dirty || subjectTxtBx.touched) &&
+        subjectTxtBx.invalid) { @if(subjectTxtBx.errors?.['required']) {
+        <span>Subject required</span>
+        } @else if (subjectTxtBx.errors?.['minlength']) {
+        <span>Min length of 2 for subject</span>
+        } }
       </div>
 
       <label>Message:</label>
       <textarea
-        type="email"
+        type="text"
         class="text-box"
         name="message"
         [(ngModel)]="contactInfo.message"
         required
         minlength="5"
+        #msgTxtArea="ngModel"
       ></textarea>
-      <div class="error-div"></div>
+      <div class="error-div">
+        @if((msgTxtArea.dirty || msgTxtArea.touched) && msgTxtArea.invalid) {
+        @if(msgTxtArea.errors?.['required']) {
+        <span>Message required</span>
+        } @else if (msgTxtArea.errors?.['minlength']) {
+        <span>Min length of 5 for message</span>
+        } }
+      </div>
 
       <button type="submit" class="submit-btn">Submit</button>
     </form>
