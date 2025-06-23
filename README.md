@@ -20,3 +20,7 @@ Angular version = 18.2.14.
 ![9](https://github.com/buddhika85/30_Apps_Angular/blob/main/app_pics/9.png)
 ### 10 Random Joke Generator
 ![10](https://github.com/buddhika85/30_Apps_Angular/blob/main/app_pics/10.png)
+### 12 Feedback form - Template Driven form
+![12](https://github.com/buddhika85/30_Apps_Angular/blob/main/app_pics/13-%20Feedback%20form%20-%20Template%20Driven%20form.png)
+### 13 Contact Form - Template Driven form.
+![13](https://github.com/buddhika85/30_Apps_Angular/blob/main/app_pics/13-Contact%20Form%20-%20Template%20Driven%20form.png)
