@@ -13,11 +13,12 @@ import { RandomJokeGen10Component } from './random-joke-gen-10/random-joke-gen-1
 import { FeedbackForm12Component } from './feedback-form-12/feedback-form-12.component';
 import { ContactForm13Component } from './contact-form-13/contact-form-13.component';
 import { ContactReactiveForm14Component } from './contact-reactive-form-14/contact-reactive-form-14.component';
+import { CustomDirectives15Component } from './custom-directives-15/custom-directives-15.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [ContactReactiveForm14Component],
+  imports: [CustomDirectives15Component],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
