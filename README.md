@@ -24,3 +24,5 @@ Angular version = 18.2.14.
 ![12](https://github.com/buddhika85/30_Apps_Angular/blob/main/app_pics/13-%20Feedback%20form%20-%20Template%20Driven%20form.png)
 ### 13 Contact Form - Template Driven form.
 ![13](https://github.com/buddhika85/30_Apps_Angular/blob/main/app_pics/13-Contact%20Form%20-%20Template%20Driven%20form.png)
+### 14 Contact Form - Reactive form.
+![14](https://github.com/buddhika85/30_Apps_Angular/blob/main/app_pics/14-Contact%20Form%20-%20Reactive%20form.png)
