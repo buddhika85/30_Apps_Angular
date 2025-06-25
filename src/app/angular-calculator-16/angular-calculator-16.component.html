@@ -1,0 +1,22 @@
+<div class="flex felx-col m-5 mx-auto">
+  <h3 class="heading">Angular Calculator</h3>
+</div>
+
+<div class="calc-div">
+  <div class="display-div grid grid-rows-2">
+    <div class="expression-div">{{ expression }}</div>
+    <div class="result-div">{{ result }}</div>
+  </div>
+
+  <div class="grid grid-cols-4 px-3 py-4">
+    @for (button of calculator.buttons; track $index) {
+    <button
+      class="calc-btn"
+      [class]="button.useNumberClass ? 'number-btn' : 'ops-btn'"
+      (click)="onClick(button)"
+    >
+      {{ button.value ?? button.operation }}
+    </button>
+    }
+  </div>
+</div>

@@ -14,11 +14,12 @@ import { FeedbackForm12Component } from './feedback-form-12/feedback-form-12.com
 import { ContactForm13Component } from './contact-form-13/contact-form-13.component';
 import { ContactReactiveForm14Component } from './contact-reactive-form-14/contact-reactive-form-14.component';
 import { CustomDirectives15Component } from './custom-directives-15/custom-directives-15.component';
+import { AngularCalculator16Component } from './angular-calculator-16/angular-calculator-16.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CustomDirectives15Component],
+  imports: [AngularCalculator16Component],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })

@@ -1,0 +1,31 @@
+.heading {
+  @apply mx-auto text-slate-600 m-5 text-center font-mono font-extrabold text-lg;
+}
+
+.calc-div {
+  @apply flex flex-col w-1/6 m-5 p-4 border rounded border-green-700 shadow bg-green-700 mx-auto;
+}
+
+.display-div {
+  @apply w-full text-right text-gray-100 px-3 py-4  bg-black font-mono  border border-black rounded;
+}
+
+.result-div {
+  @apply text-3xl;
+}
+
+.expression-div {
+  @apply text-lg;
+}
+
+.calc-btn {
+  @apply p-2 m-1 text-2xl text-white border border-slate-300 rounded shadow cursor-pointer bg-slate-500 hover:bg-yellow-500;
+}
+
+.ops-btn {
+  @apply bg-red-500;
+}
+
+.number-btn {
+  @apply bg-slate-300 text-black;
+}
